@@ -1,0 +1,32 @@
+# Data files
+*.csv
+*.json
+*.pkl
+*.pickle
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
