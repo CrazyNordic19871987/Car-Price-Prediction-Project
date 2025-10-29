@@ -1,32 +1,156 @@
-# Data files
-*.csv
-*.json
-*.pkl
-*.pickle
+Этот .gitignore файл включает:
 
-# Jupyter
-.ipynb_checkpoints/
-__pycache__/
+Временные файлы и кэши - логи, временные файлы
+Файлы IDE - настройки VS Code, PyCharm
+Файлы ОС - для Windows, MacOS, Linux
+Python специфичные - виртуальные окружения, кэш, файлы сборки
+Jupyter Notebook - чекпоинты блокнотов
+Данные и модели - закомментированы, можно раскомментировать если не хотите загружать в репозиторий
+Конфигурации - файлы с чувствительной информацией
+Логи и результаты - выходные данные
+Документация - сгенерированная документация
+Архивы и бэкапы - резервные копии и архивы
 
-# Environment
-.env
-.venv
-env/
-venv/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
+# Временные файлы и кэши
+*.tmp
+*.temp
 *.log
+*.cache
+*.pid
+*.pid.lock
 
-# IDE
+# Файлы IDE и редакторов
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# Temporary files
-tmp/
-temp/
+# Файлы операционных систем
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python файлы
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Файлы данных (раскомментируйте если не хотите загружать данные в репозиторий)
+# data/
+# *.csv
+# *.json
+# *.xlsx
+# *.db
+
+# Модели машинного обучения (раскомментируйте если не хотите загружать модели)
+# models/
+# *.pkl
+# *.joblib
+# *.model
+
+# Файлы конфигурации с чувствительной информацией
+config.yaml
+config.yml
+*.env
+.env.local
+.env.production
+
+# Логи и результаты
+logs/
+results/
+output/
+*.log
+
+# Установочные файлы
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Файлы покрытия кода
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+nosetests.xml
+
+# Файлы документации
+docs/_build/
+site/
+
+# Временные файлы проекта
+.tox/
+.nox/
+
+# Файлы специфичные для Windows
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]emp/
+
+# Файлы специфичные для MacOS
+.AppleDouble
+.LSOverride
+
+# Файлы специфичные для Linux
+*~
+
+# Файлы архива
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Резервные копии
+*.bak
+*.backup
+
+# Файлы пакетов
+*.deb
+*.rpm
+
+# Файлы специфичные для Python packaging
+MANIFEST
+
+# Файлы mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Файлы Pyre
+.pyre/
+
+# Файлы для Streamlit (если используется)
+.streamlit/
+
+# Файлы для MLflow (если используется)
+mlruns/
+mlartifacts/
+
+# Файлы для DVC (если используется)
+.dvc/
+
+# Файлы для Heroku (если используется)
+*.sqlite3
