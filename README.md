@@ -1,174 +1,138 @@
-Car Price Prediction Project
+# 🚗 Прогнозирование стоимости автомобилей
 
-https://img.shields.io/badge/Python-3.7%252B-blue
-https://img.shields.io/badge/Machine-Learning-orange
-https://img.shields.io/badge/Scikit--learn-1.0%252B-green
-https://img.shields.io/badge/Status-Completed-brightgreen
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Машинное обучение](https://img.shields.io/badge/Машинное-Обучение-orange)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-green)
+![Статус](https://img.shields.io/badge/Статус-Завершен-brightgreen)
 
-📋 Project Overview
-This project implements a comprehensive machine learning solution for predicting car prices based on various vehicle features. Using a dataset of 10,000 car listings from Craigslist, we develop and compare multiple regression models to accurately estimate vehicle prices.
+## 📋 О проекте
 
-🎯 Objectives
-Perform comprehensive exploratory data analysis (EDA) on car listing data
+Проект по прогнозированию стоимости автомобилей с использованием методов машинного обучения. На основе данных о 10,000 объявлений с Craigslist мы разрабатываем и сравниваем различные регрессионные модели для точной оценки стоимости транспортных средств.
 
-Preprocess and clean the dataset for machine learning
+## 🎯 Цели проекта
 
-Implement and compare multiple regression algorithms
+- Провести комплексный анализ данных об автомобилях
+- Подготовить и очистить данные для машинного обучения
+- Реализовать и сравнить несколько алгоритмов регрессии
+- Оптимизировать производительность моделей
+- Создать надежную систему прогнозирования цен
 
-Optimize model performance through hyperparameter tuning
+## 📊 Данные
 
-Create a robust price prediction system
+Датасет содержит **10,000 объявлений** об автомобилях с **20 характеристиками**:
 
-📊 Dataset
-The dataset contains 10,000 car listings with 20 features including:
+### Ключевые признаки:
+- **price**: Целевая переменная (цена автомобиля)
+- **year**: Год выпуска (1915-2022)
+- **manufacturer**: Производитель (40 уникальных брендов)
+- **model**: Модель автомобиля (3,466 уникальных моделей)
+- **odometer**: Пробег
+- **fuel**: Тип топлива (бензин, дизель, гибрид, электро, другое)
+- **transmission**: Тип трансмиссии
+- **title_status**: Статус прав собственности
+- **state**: Географическое расположение
+- **lat/long**: Координаты
+- **price_category**: Предварительная классификация по цене
 
-Key Features:
-price: Target variable (car price)
+## 🛠️ Установка
 
-year: Manufacturing year (1915-2022)
+### Предварительные требования
+- Python 3.7+
+- Менеджер пакетов pip
 
-manufacturer: Car manufacturer (40 unique brands)
+### Пошаговая установка
 
-model: Car model (3,466 unique models)
+1. **Клонируйте репозиторий**
+```bash
+git clone https://github.com/yourusername/car-price-prediction.git
+cd car-price-prediction
 
-odometer: Mileage reading
-
-fuel: Fuel type (gas, diesel, hybrid, electric, other)
-
-transmission: Transmission type
-
-title_status: Vehicle title status
-
-state: Geographical location
-
-lat/long: Coordinates
-
-price_category: Pre-classified price range
-
-🛠️ Installation
-Prerequisites
-Python 3.7+
-
-pip package manager
-
-Project Structure
 car-price-prediction/
 │
 ├── data/
-│   └── df_out.csv                 # Main dataset
+│   └── df_out.csv                 # Основной датасет
 │
 ├── notebooks/
-│   └── car_price_prediction_project_20251024_094500.ipynb  # Main analysis notebook
+│   └── car_price_prediction_project_20251024_094500.ipynb  # Основной блокнот анализа
 │
 ├── src/
 │   ├── __init__.py
-│   ├── data_preprocessing.py      # Data cleaning and preprocessing
-│   ├── feature_engineering.py     # Feature creation and selection
-│   ├── model_training.py          # Model training functions
-│   └── utils.py                   # Utility functions
+│   ├── data_preprocessing.py      # Очистка и предобработка данных
+│   ├── feature_engineering.py     # Создание и выбор признаков
+│   ├── model_training.py          # Функции обучения моделей
+│   └── utils.py                   # Вспомогательные функции
 │
-├── models/                        # Saved models
-├── results/                       # Output and evaluation results
-├── requirements.txt               # Project dependencies
-├── README.md                      # Project documentation
-└── config.yaml                    # Configuration file
+├── models/                        # Сохраненные модели
+├── results/                       # Результаты и оценки
+├── requirements.txt               # Зависимости проекта
+├── README.md                      # Документация проекта
+└── config.yaml                    # Файл конфигурации
 
 
-🔧 Usage
-Data Preprocessing
-The notebook includes comprehensive data preprocessing:
+🔧 Использование
+Предобработка данных
+Блокнот включает комплексную предобработку данных:
 
-Missing value imputation
+Восстановление пропущенных значений
 
-Data type conversion
+Преобразование типов данных
 
-Anomaly detection and treatment
+Обнаружение и обработка аномалий
 
-Feature encoding
+Кодирование признаков
 
-Model Training
-The project implements and compares multiple algorithms:
+Обучение моделей
+Проект реализует и сравнивает несколько алгоритмов:
 
-Linear Models
+Линейные модели
 
-Linear Regression
+Линейная регрессия
 
-Ridge Regression
+Гребневая регрессия (Ridge)
 
-Lasso Regression
+Лассо регрессия (Lasso)
 
-Ensemble Methods
+Ансамблевые методы
 
-Random Forest Regressor
+Случайный лес (Random Forest)
 
-Gradient Boosting Regressor
+Градиентный бустинг (Gradient Boosting)
 
-Other Algorithms
+Другие алгоритмы
 
-Support Vector Regressor (SVR)
+Метод опорных векторов (SVR)
 
-Model Evaluation
-Models are evaluated using:
+Оценка моделей
+Модели оцениваются с использованием:
 
-Mean Absolute Error (MAE)
+Средней абсолютной ошибки (MAE)
 
-Mean Squared Error (MSE)
+Средней квадратичной ошибки (MSE)
 
-R-squared (R²) Score
+Коэффициента детерминации (R²)
 
-Cross-validation
+Кросс-валидации
 
-📈 Results
-Key Findings from EDA:
-Price range: $500 - $12,345,680
+📈 Результаты
+Ключевые находки EDA:
+Диапазон цен: $500 - $12,345,680
 
-Most common manufacturers: Ford, Chevrolet, Toyota
+Самые популярные производители: Ford, Chevrolet, Toyota
 
-Fuel type distribution: 84% gasoline vehicles
+Распределение по типу топлива: 84% бензиновые автомобили
 
-Geographical coverage across all US states
+Географическое покрытие: все штаты США
 
-Model Performance:
-(Results will be populated after model training)
+Производительность моделей:
+(Результаты будут заполнены после обучения моделей)
 
-🧪 Technical Details
-Libraries Used
-Data Manipulation: pandas, numpy
+🧪 Технические детали
+Используемые библиотеки
+Манипуляция данными: pandas, numpy
 
-Visualization: matplotlib, seaborn
+Визуализация: matplotlib, seaborn
 
-Machine Learning: scikit-learn
+Машинное обучение: scikit-learn
 
-Model Optimization: GridSearchCV, RandomizedSearchCV
-
-🤝 Contributing
-We welcome contributions! Please follow these steps:
-
-Fork the project
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-Dataset sourced from Craigslist vehicle listings
-
-Scikit-learn community for excellent documentation
-
-Google Colab for computational resources
-
-📞 Contact
-For questions or suggestions, please open an issue or contact:
-
-Your Name - Andrey Kuleshov andrejkuleshov1987@gmail.com
-
-Project Link: https://github.com/CrazyNordic19871987/car-price-prediction
-
+Оптимизация моделей: GridSearchCV, RandomizedSearchCV
 
